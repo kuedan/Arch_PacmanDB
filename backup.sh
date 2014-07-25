@@ -1,7 +1,7 @@
 #!/bin/bash
-pacaur -Qqe | grep -v "$(pacman -Qmq)" > pkglist 
+pacaur -Qqe | grep -v "$(pacaur -Qmq)" > pkglist 
 #git init 
 #git add pkglist 
-git commit -m 
+echo 'git commit -m "Description" needsto be added'
 #git remote add origin kuedan@github.com/kuedan/Arch_PacmanDB.git 
-git push origin master
+echo 'Need to execute "git push origin master"'
