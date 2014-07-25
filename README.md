@@ -3,11 +3,6 @@ Arch_PacmanDB
 
 My pacman packages
 
-
-Clone this with
-git clone 
-
-
 Arch Linux Quick Install
 
 pacman -Syu
@@ -22,12 +17,17 @@ cd aui
 
 Backup Pacman
 
-Backup
+Backup:
 
 pacman -Qqe | grep -v "$(pacman -Qmq)" > pkglist
+git init
+git add pkglist
+git commit -m 'First Commit'
+git remote add origin kuedan@github.com/kuedan/Arch_PacmanDB.git
+git push origin master
 
-Restore
+Restore:
 
-https://github.com/kuedan/arch-config.git
-
+git clone git@github.com:kuedan/Arch_PacmanDB.git
+cd Arch_PacmanDB
 pacman -S $(cat pkglist)
